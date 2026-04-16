@@ -1,6 +1,7 @@
 import 'package:crypto_app/providers/favorites_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'coin_detail_screen.dart';
 
 class FavoritesCryptoApp extends StatelessWidget {
   const FavoritesCryptoApp({super.key});
@@ -55,6 +56,14 @@ class FavoritesCryptoApp extends StatelessWidget {
               final String imageUrl = (coin['image'] ?? '').toString();
 
               return ListTile(
+                onTap: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                      builder: (context) => CoinDetailScreen(coin: coin),
+                    )
+                  );
+                },
                 leading: _buildCoinAvatar(symbol: symbol, imageUrl: imageUrl),
                 title:  Row(
                   children: [

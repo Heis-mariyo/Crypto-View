@@ -161,7 +161,7 @@ class _HomeCryptoAppState extends State<HomeCryptoApp> {
         Padding(
           padding: const EdgeInsets.all(16.0),
           child: Container(
-            padding: const EdgeInsets.only(left: 15.0),
+            padding: const EdgeInsets.only(left: 15.0) ,
             decoration: BoxDecoration(
               color: Colors.grey.shade900,
               borderRadius: BorderRadius.circular(24.0),
